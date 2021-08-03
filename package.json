@@ -1,0 +1,25 @@
+{
+  "name": "task",
+  "version": "1.0.0",
+  "description": "Sample login on email validation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aravind",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "fastify": "^3.19.2",
+    "fastify-cors": "^6.0.2",
+    "fastify-jwt": "^3.0.0",
+    "fastify-knexjs": "^1.4.0",
+    "fastify-log": "^1.2.1",
+    "moment": "^2.29.1",
+    "nodemailer": "^6.6.3",
+    "pg": "^8.7.1",
+    "shortid": "^2.2.16",
+    "simple-crypto-js": "^3.0.0"
+  }
+}
