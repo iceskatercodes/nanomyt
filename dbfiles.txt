@@ -1,0 +1,43 @@
+POstgres files to be created
+-- Database: myminiproject
+
+-- DROP DATABASE myminiproject;
+
+CREATE DATABASE myminiproject
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_United States.1252'
+    LC_CTYPE = 'English_United States.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+    
+-- SCHEMA: nanomyt
+
+-- DROP SCHEMA nanomyt ;
+
+CREATE SCHEMA nanomyt
+    AUTHORIZATION postgres;
+    
+-- Table: nanomyt.users
+
+-- DROP TABLE nanomyt.users;
+
+CREATE TABLE nanomyt.users
+(
+    id integer NOT NULL DEFAULT nextval('nanomyt."Users_id_seq"'::regclass),
+    firstname character varying COLLATE pg_catalog."default",
+    lastname character varying COLLATE pg_catalog."default",
+    email character varying COLLATE pg_catalog."default" NOT NULL,
+    password character varying COLLATE pg_catalog."default",
+    created_at timestamp with time zone,
+    updated_at timestamp with time zone,
+    is_registered boolean NOT NULL DEFAULT false,
+    CONSTRAINT "Users_pkey" PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE nanomyt.users
+    OWNER to postgres;    
+    
