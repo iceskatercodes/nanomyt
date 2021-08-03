@@ -61,7 +61,7 @@ function configurehandler(fastify) {
                 return {error:false,msg:"mail sent",link:encstr,check_mail:'https://ethereal.email/messages'}
             }
             else {
-                return appMsg.errorReply(appMsg.ERR_CODE.SVC_ERR);
+                return appMsg.errorReply(appMsg.ERR_CODE.REGISTERED);
             }
         } catch (e) {
             console.log(e)
